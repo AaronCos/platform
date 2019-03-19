@@ -1,0 +1,19 @@
+server:
+  port: 8080
+  tomcat.max-threads: 50
+  tomcat.uri-encoding: UTF-8
+spring:
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/sswh_user??characterEncoding=utf-8&serverTimezone=UTC
+    username: root
+    password: aaron
+    type: com.mchange.v2.c3p0.ComboPooledDataSource
+mybatis:
+  # 配置类型别名
+  typeAliasesPackage: com.sswh.platform.entity.User
+  # 配置mapper的扫描，找到所有的mapper.xml映射文件
+  mapperLocations: classpath:platform/mapping/*.xml
+  # 加载全局的配置文件
+  configLocation: classpath:mybatis-config.xml
+
+
